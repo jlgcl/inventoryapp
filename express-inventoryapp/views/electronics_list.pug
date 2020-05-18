@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+    h1=title
+    p List of all Electronics
+
+    each electronic in electronics
+
+    
+        li
+            a(href=electronics.url) #{electronics.name}
+    
+    else
+        li there are no electronics
+        

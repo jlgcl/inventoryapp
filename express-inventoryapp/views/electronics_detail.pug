@@ -1,0 +1,23 @@
+extends layout
+
+block content
+
+    h1= title
+    p Detail of Electronics
+
+    div(style="margin-left:20px;margin-top:20px")
+
+        h4 Electronics
+
+        dl
+            each electronic in electronics
+                dt 
+                    a(href=electronics.url) #{electronics.name}
+                dd #{electronics.description}
+
+
+    hr
+    p
+        a(href=electronics.url + '/delete') Delete Electronics
+    p
+        a(href=electronics.url + '/update') Update Electronics
